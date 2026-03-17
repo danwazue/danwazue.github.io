@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8"/>
+  <title>2.008 Yo-Yo · Daniel Nwazue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">DANIEL NWAZUE</a>
+    <ul class="nav-links">
+      <li><a href="/"        >HOME</a></li>
+      <li><a href="/projects" class="active">PROJECTS</a></li>
+      <li><a href="/about"   >ABOUT</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    
+<div class="container">
+  <article class="project-single">
+
+    <a href="/projects/" class="back-link">← All Projects</a>
+
+    <div class="project-header">
+      <h1 class="project-title">2.008 Yo-Yo</h1>
+      
+        <p class="project-tagline">Designing and manufacturing 50 yo-yos using injection molding, thermoforming, and CNC machining</p>
+      
+
+      
+      <div class="project-cover-wrap">
+        <img src="/images/2008/yoyo-hero.jpg" alt="2.008 Yo-Yo" class="project-cover-img"/>
+      </div>
+      
+
+      <div class="project-meta-grid">
+        
+        <div class="meta-block">
+          <p class="meta-label">Skills</p>
+          <span class="meta-tag">Injection Molding</span><span class="meta-tag">Thermoforming</span><span class="meta-tag">CNC Machining</span><span class="meta-tag">SolidWorks CAD</span><span class="meta-tag">CAM</span><span class="meta-tag">Design for Manufacturing</span>
+        </div>
+        
+        
+        <div class="meta-block">
+          <p class="meta-label">Timeline</p>
+          <p class="meta-value">Feb – May 2025</p>
+          <p class="meta-value">15 weeks</p>
+        </div>
+        
+        
+        <div class="meta-block">
+          <p class="meta-label">Collaborators</p>
+          <p class="meta-value">[Teammate name]</p><p class="meta-value">[Teammate name]</p>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="project-body">
+      <p class="project-body">2.008 (Design and Manufacturing II) is MIT's production-scale manufacturing course. Rather than building one-off prototypes, each team designs a yo-yo and then manufactures <strong>50 complete units</strong> using the same industrial processes found in real factories — injection molding, thermoforming, and CNC machining. The course is as much about <em>process</em> as it is about design.</p>
+<p class="project-body">This page documents the project as it unfolds. We're currently past the Design Review (Week 6) with molds machined and first injection molded parts in hand.</p>
+<h2 class="project-body-heading">The Goal</h2>
+<p class="project-body">Design a yo-yo that meets all class constraints, can be manufactured repeatably at quantity, and holds together via a press fit — no glue, no fasteners holding the halves together. The engineering challenge is less about the shape and more about controlling tolerances across a multi-step manufacturing process so that the press fit is consistent across all 50 units.</p>
+<h2 class="project-body-heading">Design</h2>
+<p class="project-body">Our yo-yo consists of two injection molded body halves, a thermoformed ring, and an insert-molded nut for the axle. Key design constraints we worked within:</p>
+<ul class="project-body-list">
+  <li>At least <strong>2 injection molded parts</strong> and <strong>1 thermoformed part</strong></li>
+  <li>Draft angles on all IM surfaces for clean ejection</li>
+  <li>Uniform wall thickness to prevent sink marks and warping</li>
+  <li>Press fit sized to account for shrinkage — modeled in Fusion 360 and validated against the manufacturing spreadsheet</li>
+  <li>All features machinable on a 3-axis CNC mill</li>
+</ul>
+<div class="img-grid cols-2">
+  <div class="img-block">
+    <img src="/images/2008/yoyo-cad-exploded.jpg" alt="Exploded CAD view of yo-yo assembly" class="project-cover-img"/>
+    <p class="img-caption">Exploded assembly view</p>
+  </div>
+  <div class="img-block">
+    <img src="/images/2008/yoyo-cad-section.jpg" alt="Cross section showing press fit detail" class="project-cover-img"/>
+    <p class="img-caption">Cross section highlighting press fit interface</p>
+  </div>
+</div>
+<h2 class="project-body-heading">Press Fit Engineering</h2>
+<p class="project-body">Getting the press fit right required working backwards from the desired interference at room temperature, accounting for the shrinkage of the specific plastic we're using. We modeled shrinkage in Fusion 360 and scaled our mold CAD accordingly — parts come out of the mold slightly oversized, and shrink to their final target dimensions as they cool.</p>
+<div class="img-grid cols-2">
+  <div class="img-block">
+    <img src="/images/2008/mold-cad.jpg" alt="Mold CAD" class="project-cover-img"/>
+    <p class="img-caption">Mold CAD with gate, runner, and ejector pin holes</p>
+  </div>
+  <div class="img-block">
+    <img src="/images/2008/manufacturing-spreadsheet.jpg" alt="Manufacturing spreadsheet screenshot" class="project-cover-img"/>
+    <p class="img-caption">Manufacturing spreadsheet — shrinkage and press fit parameters</p>
+  </div>
+</div>
+<h2 class="project-body-heading">CNC Machining the Molds</h2>
+<p class="project-body">Molds were programmed in Fusion 360 using 2.5D and 3D CAM toolpaths, then cut on the <strong>HAAS VF2ss VMC</strong> in the LMP machine shop. We used probing to set work offsets precisely before each run. Getting the CAM right — choosing the right tools, stepdowns, and finishing passes — was its own design challenge.</p>
+<div class="img-grid cols-2">
+  <div class="img-block">
+    <img src="/images/2008/mold-machined.jpg" alt="Machined aluminum mold" class="project-cover-img"/>
+    <p class="img-caption">Finished aluminum mold after CNC machining</p>
+  </div>
+  <div class="img-block">
+    <img src="/images/2008/cam-simulation.jpg" alt="CAM toolpath simulation in Fusion 360" class="project-cover-img"/>
+    <p class="img-caption">CAM simulation in Fusion 360</p>
+  </div>
+</div>
+<h2 class="project-body-heading">Injection Molding</h2>
+<p class="project-body">With molds machined, we moved to the injection molding machines — a Boy and an Arburg. The process involved reaming ejector pin holes to final size, setting up MUD frames, dialing in shot size, and troubleshooting short shots and flash. First parts are out.</p>
+<div class="img-grid cols-2">
+  <div class="img-block">
+    <img src="/images/2008/im-parts.jpg" alt="First injection molded yo-yo parts" class="project-cover-img"/>
+    <p class="img-caption">First injection molded parts off the mold</p>
+  </div>
+  <div class="img-block">
+    <img src="/images/2008/im-setup.jpg" alt="Injection molding machine setup" class="project-cover-img"/>
+    <p class="img-caption">MUD frame setup on the Boy injection molder</p>
+  </div>
+</div>
+<h2 class="project-body-heading">Up Next</h2>
+<p class="project-body">The project is ongoing — still ahead of us are thermoforming the ring, measuring parts on the CMM to validate shrinkage predictions, peer reviews, and ultimately assembling and testing all 50 yo-yos before the final presentation in Week 15.</p>
+    </div>
+
+    <div class="project-nav">
+      <a href="/" class="back-link">NEXT PROJECT &nbsp;→</a>
+    </div>
+
+  </article>
+</div>
+
+  </main>
+
+  <footer>
+    <span>© 2026 Daniel Nwazue</span>
+    <div class="footer-links">
+      <a href="/resume.pdf" target="_blank">Resume</a>
+      <a href="mailto:danwazue@mit.edu">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    
+    window.addEventListener('scroll', function() {
+      document.querySelector('nav').classList.toggle('nav-scrolled', window.scrollY > 0);
+    });
+  </script>
+</body>
+</html>

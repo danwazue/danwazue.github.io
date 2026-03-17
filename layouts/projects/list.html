@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="container">
+
+  <section class="section">
+    <h1 class="projects-title">Projects</h1>
+    <p class="gallery-subtitle">All projects and work.</p>
+
+    <div class="project-grid">
+      {{ range where .Site.RegularPages "Section" "projects" }}
+      <a href="{{ .RelPermalink }}" class="card">
+        <div class="card-image-wrapper">
+          {{ with .Params.cover }}
+            <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy"/>
+          {{ else }}
+            <div class="card-placeholder"></div>
+          {{ end }}
+        </div>
+        <div class="card-body">
+          <p class="card-title"><strong>{{ .Title }}</strong></p>
+          <p class="card-subtitle">{{ .Params.category }}{{ with .Params.year }} · {{ . }}{{ end }}</p>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+
+</div>
+{{ end }}

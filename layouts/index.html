@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="container">
+
+  <section class="hero">
+    <div class="hero-inner">
+      {{ with .Site.Params.headshot }}
+        <img class="hero-photo" src="{{ . }}" alt="{{ $.Site.Title }}"/>
+      {{ else }}
+        <div class="hero-photo hero-photo-placeholder"></div>
+      {{ end }}
+      <div>
+        <p class="hero-greeting">{{ .Site.Params.greeting }}</p>
+        <h1 class="hero-headline">{{ .Site.Params.heroText | safeHTML }}</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="project-grid">
+      {{ range where (where .Site.RegularPages "Section" "projects") ".Params.featured" true }}
+      <a href="{{ .RelPermalink }}" class="card">
+        <div class="card-image-wrapper">
+          {{ with .Params.cover }}
+            <img src="{{ . }}" alt="{{ $.Title }}" loading="eager"/>
+          {{ else }}
+            <div class="card-placeholder"></div>
+          {{ end }}
+        </div>
+        <div class="card-body">
+          <p class="card-title"><strong>{{ .Title }}</strong></p>
+          <p class="card-subtitle">{{ .Params.category }}{{ with .Params.year }} · {{ . }}{{ end }}</p>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+
+</div>
+{{ end }}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">{{ .Site.Title | upper }}</a>
+    <ul class="nav-links">
+      <li><a href="/"        {{ if .IsHome }}class="active"{{ end }}>HOME</a></li>
+      <li><a href="/projects" {{ if eq .Section "projects" }}class="active"{{ end }}>PROJECTS</a></li>
+      <li><a href="/about"   {{ if eq .RelPermalink "/about/" }}class="active"{{ end }}>ABOUT</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer>
+    <span>© {{ now.Year }} {{ .Site.Title }}</span>
+    <div class="footer-links">
+      <a href="{{ .Site.Params.resumeURL }}" target="_blank">Resume</a>
+      <a href="mailto:{{ .Site.Params.email }}">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    // add shadow to navbar when page is scrolled
+    window.addEventListener('scroll', function() {
+      document.querySelector('nav').classList.toggle('nav-scrolled', window.scrollY > 0);
+    });
+  </script>
+</body>
+</html>

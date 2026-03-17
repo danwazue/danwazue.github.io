@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8"/>
+  <title>2.007 Robot · Daniel Nwazue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">DANIEL NWAZUE</a>
+    <ul class="nav-links">
+      <li><a href="/"        >HOME</a></li>
+      <li><a href="/projects" class="active">PROJECTS</a></li>
+      <li><a href="/about"   >ABOUT</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    
+<div class="container">
+  <article class="project-single">
+
+    <a href="/projects/" class="back-link">← All Projects</a>
+
+    <div class="project-header">
+      <h1 class="project-title">2.007 Robot</h1>
+      
+        <p class="project-tagline">Designing and fabricating a competition robot to maximize points in MIT&#39;s 2.007 Design &amp; Manufacturing I</p>
+      
+
+      
+      <div class="project-cover-wrap">
+        <img src="/images/2007/robot-hero.jpg" alt="2.007 Robot" class="project-cover-img"/>
+      </div>
+      
+
+      <div class="project-meta-grid">
+        
+        <div class="meta-block">
+          <p class="meta-label">Skills</p>
+          <span class="meta-tag">Mechanical Design</span><span class="meta-tag">SolidWorks CAD</span><span class="meta-tag">Fabrication</span><span class="meta-tag">Arduino</span><span class="meta-tag">Autonomy</span>
+        </div>
+        
+        
+        <div class="meta-block">
+          <p class="meta-label">Timeline</p>
+          <p class="meta-value">Feb – May 2025</p>
+          <p class="meta-value">10 weeks</p>
+        </div>
+        
+        
+      </div>
+    </div>
+
+    <div class="project-body">
+      <p class="project-body">2.007 (Design and Manufacturing I) is MIT's core mechanical engineering design course. Each student spends the semester designing and building their own robot to compete on a shared game board. The 2025 theme was based on the Wizard of Oz.</p>
+<p class="project-body">My goal: <strong>maximize points in both the autonomous and manual rounds.</strong> After analyzing the scoring breakdown, I zeroed in on two challenges — the train (38 pts × 2 laps = 76 pts) and the balloon (83.5 pts) — for a theoretical total of 159.5 points.</p>
+<div class="project-cover-wrap">
+  <img src="/images/2007/game-board.jpg" alt="2.007 game board" class="project-cover-img"/>
+</div>
+<h2 class="project-body-heading">Design Requirements</h2>
+<p class="project-body">Before touching any CAD or cutting any material, I set clear requirements to keep decisions grounded:</p>
+<ul class="project-body-list">
+  <li>Adjustable to two distinct heights: <strong>6" and 6.75"</strong></li>
+  <li>Support a load torque of at least <strong>2 Nm</strong></li>
+  <li>Operate at max motor power</li>
+  <li>Autonomous control via photoresistor sensor</li>
+  <li>Minimize friction and avoid over-constraint in the drivetrain</li>
+</ul>
+<h2 class="project-body-heading">Motor & Drivetrain Analysis</h2>
+<p class="project-body">I ran hand calculations to verify the drivetrain could handle the required torque and complete both challenges within the time limit. Using two <strong>BLIDA 25-2 torque servos</strong> on a 7.4V LiPo, each motor produces 1.3 Nm at peak power. After a 2:1 reduction, combined output torque reached 5.2 Nm at 15.42 RPM — enough to complete the train challenge in ~50.6 sec and the balloon in ~15.6 sec.</p>
+<div class="img-grid cols-2">
+  <div class="img-block">
+    <img src="/images/2007/motor-calcs.jpg" alt="Motor calculations notebook page" class="project-cover-img"/>
+    <p class="img-caption">Hand calculations for motor selection</p>
+  </div>
+  <div class="img-block">
+    <img src="/images/2007/leadscrew-calcs.jpg" alt="Lead screw torque analysis" class="project-cover-img"/>
+    <p class="img-caption">Lead screw torque analysis with 1.5× safety factor</p>
+  </div>
+</div>
+<h2 class="project-body-heading">Module 1: Spinner</h2>
+<p class="project-body">The spinner module drives the train via a spur gear reduction, mounted in a laser-cut aluminum plate sandwich. I modeled every component in SolidWorks before cutting anything — several clearance issues between the gear stack and plate sandwich showed up in CAD before becoming real problems in the shop.</p>
+<div class="img-grid cols-2">
+  <div class="img-block">
+    <img src="/images/2007/spinner-cad-iso.jpg" alt="Spinner assembly isometric" class="project-cover-img"/>
+    <p class="img-caption">Spinner assembly — isometric view</p>
+  </div>
+  <div class="img-block">
+    <img src="/images/2007/spinner-cad-exploded.jpg" alt="Spinner exploded view" class="project-cover-img"/>
+    <p class="img-caption">Exploded view showing gear stack</p>
+  </div>
+</div>
+<h2 class="project-body-heading">Module 2: Chassis</h2>
+<p class="project-body">The chassis holds everything together and integrates the lead screw height-adjustment mechanism. The carriage rides on four flanged bearings to stay aligned without over-constraint. All structural plates were waterjet cut from aluminum stock and assembled in the Pappalardo Lab.</p>
+<div class="img-grid cols-2">
+  <div class="img-block">
+    <img src="/images/2007/chassis-cad.jpg" alt="Chassis CAD with lead screw" class="project-cover-img"/>
+    <p class="img-caption">Chassis with lead screw assembly</p>
+  </div>
+  <div class="img-block">
+    <img src="/images/2007/mcm-prototype.jpg" alt="Mid-construction milestone prototype" class="project-cover-img"/>
+    <p class="img-caption">Mid-construction milestone prototype</p>
+  </div>
+</div>
+<h2 class="project-body-heading">Autonomy</h2>
+<p class="project-body">The autonomous round required the robot to act without human input. I programmed an <strong>Arduino microcontroller</strong> with a photoresistor that detected the starting light, triggering a timed motor sequence to spin the train the correct number of rotations before stopping.</p>
+<h2 class="project-body-heading">Reflection</h2>
+<p class="project-body">The biggest takeaway: <strong>CAD before lab, always.</strong> Every hour spent modeling saved at least two hours of rework at the machine. I also finished in the <strong>top 32 of 200+ students</strong> in the final competition — a result that came down to treating design requirements as a living document and iterating quickly when the lead screw mounting needed a redesign midway through.</p>
+    </div>
+
+    <div class="project-nav">
+      <a href="/" class="back-link">NEXT PROJECT &nbsp;→</a>
+    </div>
+
+  </article>
+</div>
+
+  </main>
+
+  <footer>
+    <span>© 2026 Daniel Nwazue</span>
+    <div class="footer-links">
+      <a href="/resume.pdf" target="_blank">Resume</a>
+      <a href="mailto:danwazue@mit.edu">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    
+    window.addEventListener('scroll', function() {
+      document.querySelector('nav').classList.toggle('nav-scrolled', window.scrollY > 0);
+    });
+  </script>
+</body>
+</html>

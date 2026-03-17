@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="container">
+  <article class="project-single">
+
+    <a href="/projects/" class="back-link">← All Projects</a>
+
+    <div class="project-header">
+      <h1 class="project-title">{{ .Title }}</h1>
+      {{ with .Params.tagline }}
+        <p class="project-tagline">{{ . }}</p>
+      {{ end }}
+
+      {{ with .Params.cover }}
+      <div class="project-cover-wrap">
+        <img src="{{ . }}" alt="{{ $.Title }}" class="project-cover-img"/>
+      </div>
+      {{ end }}
+
+      <div class="project-meta-grid">
+        {{ with .Params.skills }}
+        <div class="meta-block">
+          <p class="meta-label">Skills</p>
+          {{ range . }}<span class="meta-tag">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+        {{ with .Params.timeline }}
+        <div class="meta-block">
+          <p class="meta-label">Timeline</p>
+          <p class="meta-value">{{ . }}</p>
+          {{ with $.Params.duration }}<p class="meta-value">{{ . }}</p>{{ end }}
+        </div>
+        {{ end }}
+        {{ with .Params.collaborators }}
+        <div class="meta-block">
+          <p class="meta-label">Collaborators</p>
+          {{ range . }}<p class="meta-value">{{ . }}</p>{{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="project-body">
+      {{ .Content }}
+    </div>
+
+    <div class="project-nav">
+      <a href="/" class="back-link">NEXT PROJECT &nbsp;→</a>
+    </div>
+
+  </article>
+</div>
+{{ end }}

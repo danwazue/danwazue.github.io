@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container">
+  <section class="section about-section">
+    <div class="about-grid grid-3-columns">
+      <div class="about-text">
+        {{ .Content }}
+      </div>
+      {{ with .Params.photo }}
+      <div class="about-photo-wrap">
+        <img src="{{ . }}" alt="About photo" class="about-photo" />
+      </div>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}
