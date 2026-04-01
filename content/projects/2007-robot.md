@@ -6,7 +6,7 @@ featured     = true
 tagline      = "Designing and fabricating a competition robot to maximize points in MIT's 2.007 Design & Manufacturing I"
 category     = 'Mechanical Design'
 year         = '2025'
-cover        = '/images/2007-robot/hero.jpeg'
+cover        = '/images/2007-robot/hero.webp'
 skills       = ['Mechanical Design', 'SolidWorks CAD', 'Fabrication', 'Arduino', 'Autonomy']
 timeline     = 'Feb – May 2025'
 duration     = '10 weeks'
@@ -19,7 +19,7 @@ duration     = '10 weeks'
 <p class="project-body">The game board had nine scoring opportunities: Fields of Poppies, Munchkinland Artifacts, Train to Oz, Hot Air Balloon, Oz Head Levers, Machinery's Grimmerie, Flying Monkeys, Oz Multiplier, and the Broom. Each had different point values, mechanical interfaces, and positions on the table.</p>
 
 <div class="project-cover-wrap">
-  <img src="/images/2007-robot/gameboard.jpeg" alt="2.007 game board" class="project-cover-img"/>
+  <img src="/images/2007-robot/gameboard.webp" alt="2.007 game board" class="project-cover-img"/>
   <p class="img-caption">2025 game board, Wizard of Oz theme</p>
 </div>
 
@@ -112,11 +112,11 @@ duration     = '10 weeks'
 
 <div class="img-grid cols-2">
   <div class="img-block">
-    <img src="/images/2007-robot/mcm.png" alt="Spinner prototype" class="project-cover-img"/>
+    <img src="/images/2007-robot/mcm.webp" alt="Spinner prototype" class="project-cover-img"/>
     <p class="img-caption">Early prototype of the spinner module</p>
   </div>
   <div class="img-block">
-    <img src="/images/2007-robot/mcm-final.jpg" alt="Final spinner assembly" class="project-cover-img"/>
+    <img src="/images/2007-robot/mcm-final.webp" alt="Final spinner assembly" class="project-cover-img"/>
     <p class="img-caption">Final spinner assembly</p>
   </div>
 </div>
@@ -131,7 +131,7 @@ duration     = '10 weeks'
     <p class="img-caption">Chassis with lead screw assembly CAD</p>
   </div>
   <div class="img-block">
-    <img src="/images/2007-robot/mcm-mid.png" alt="Mid-construction milestone prototype" class="project-cover-img"/>
+    <img src="/images/2007-robot/mcm-mid.webp" alt="Mid-construction milestone prototype" class="project-cover-img"/>
     <p class="img-caption">Mid-construction milestone prototype</p>
   </div>
 </div>

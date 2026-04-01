@@ -6,7 +6,7 @@ featured     = false
 tagline      = 'Designing a protective and load-bearing thruster shield for an autonomous competition boat'
 category     = 'Mechanical Design'
 year         = '2023'
-cover        = '/images/thruster-shield/hero.png'
+cover        = '/images/thruster-shield/hero.webp'
 skills       = ['CAD', 'Metal Laser Cutting', 'Onshape']
 timeline     = 'Sep – Dec 2023'
 duration     = '14 weeks'
@@ -46,7 +46,7 @@ collaborators = ['Sam Huang', 'Tony Tang']
 <p class="project-body">The mounting plate was cut from aluminum sheet stock and the design was then integrated into the team's <strong>Onshape</strong> master assembly, which allowed the rest of the team to design around it without version conflicts. After assembling the thruster onto the plate, we conducted load-bearing tests.</p>
 
 <div class="img-block">
-  <img src="/images/thruster-shield/hero.png" alt="Fabricated thruster mount" class="project-cover-img"/>
+  <img src="/images/thruster-shield/hero.webp" alt="Fabricated thruster mount" class="project-cover-img"/>
   <p class="img-caption">Fabricated thruster shield.</p>
 </div>
 

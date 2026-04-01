@@ -8,7 +8,7 @@ title = 'Daniel Nwazue'
 [params]
   greeting  = "Hi, I'm Daniel!"
   heroText  = 'I am a <span class="highlight">Mechanical Engineering</span> student at MIT.'
-  headshot  = '/images/headshot.jpg'
+  headshot  = '/images/headshot.webp'
   email     = 'danwazue@mit.edu'
   resumeURL = '/resume.pdf'
 

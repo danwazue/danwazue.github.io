@@ -1,6 +1,6 @@
 +++
 title = "About"
-photo = "/images/headshot.jpg"
+photo = "/images/headshot.webp"
 +++
 
 <p class="mg-top-and-bottom-24px text-300">Hey there! I'm Daniel, a mechanical engineering student at MIT studying <span class="highlight">Controls, Instrumentation, and Robotics (Course 2A‑6)</span>. I'm passionate about designing and building systems that integrate mechanical design, manufacturing, sensing, and intelligent control. I enjoy working through the full engineering process—from concept and CAD to fabrication and testing.</p>

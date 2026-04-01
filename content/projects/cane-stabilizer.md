@@ -6,7 +6,7 @@ featured     = true
 tagline      = 'Designing a one-handed, self-stabilizing cane attachment for a user with hemiparesis'
 category     = 'Assistive Technology'
 year         = '2025'
-cover        = '/images/cane-stabilizer/hero.png'
+cover        = '/images/cane-stabilizer/hero.webp'
 skills       = ['Mechanical Design', 'Linkage Design', 'FEA', '3D Printing', 'Arduino']
 timeline     = 'Sep – Dec 2025'
 duration     = '14 weeks'
@@ -32,7 +32,7 @@ collaborators = ['Alex Zhindon-Romero', 'Amie Kitjasateanphun', 'Ephraim Fischer
 
 <div class="img-grid cols-1">
   <div class="img-block">
-    <img src="/images/cane-stabilizer/susan.png" alt="Our co-designer Susan" class="project-cover-img"/>
+    <img src="/images/cane-stabilizer/susan.webp" alt="Our co-designer Susan" class="project-cover-img"/>
     <p class="img-caption">Our co-designer, Susan Bibbins</p>
   </div>
 </div>

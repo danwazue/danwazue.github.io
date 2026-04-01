@@ -19,7 +19,7 @@ timeline     = '2024-2025'
 
 
 <div class="img-block">
-  <img src="/images/small-projects/prototype.png" alt="Breadboard Prototype" class="project-cover-img"/>
+  <img src="/images/small-projects/prototype.webp" alt="Breadboard Prototype" class="project-cover-img"/>
   <p class="img-caption">Breadboard prototype with Arudino, sensors, speaker, and motor.</p>
 </div>
 
@@ -59,13 +59,13 @@ timeline     = '2024-2025'
 <div class="img-grid cols-2">
   <div class="img-block">
     <div class="img-frame">
-      <img src="/images/small-projects/test.png" alt="Failed key prototype with sheared shaft" class="project-cover-img"/>
+      <img src="/images/small-projects/test.webp" alt="Failed key prototype with sheared shaft" class="project-cover-img"/>
       <p class="img-caption">First prototype. Shaft sheared on the first attempt.</p>
     </div>
   </div>
   <div class="img-block">
     <div class="img-frame">
-      <img src="/images/small-projects/final.png" alt="Final printed key installed" class="project-cover-img"/>
+      <img src="/images/small-projects/final.webp" alt="Final printed key installed" class="project-cover-img"/>
       <p class="img-caption">Final design, now installed in every bathroom.</p>
     </div>
   </div>

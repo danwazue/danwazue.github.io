@@ -6,7 +6,7 @@ featured     = true
 tagline      = 'Benchmarking whole-body vibration exposure on the OX4 truck against a Toyota Hilux across six test track routes'
 category     = 'Engineering Analysis'
 year         = '2025'
-cover        = '/images/vibration-analysis/hero.jpg'
+cover        = '/images/vibration-analysis/hero.webp'
 skills       = ['Data Analysis', 'Vibration Testing', 'Technical Reporting', 'ISO Standards']
 timeline     = 'Jun – Aug 2025'
 duration     = '3 months'
@@ -60,7 +60,7 @@ collaborators = ['OX Delivers Engineering Team']
 </ul>
 
 <div class="img-block">
-  <img src="/images/vibration-analysis/track.jpg" alt="Test track route overview" class="project-cover-img"/>
+  <img src="/images/vibration-analysis/track.webp" alt="Test track route overview" class="project-cover-img"/>
   <p class="img-caption">OX test track facility, Hill Route section</p>
 </div>
 
