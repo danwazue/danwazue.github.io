@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/main.css"/>
 </head>
 <body>
+  <div class="page-load-bar" aria-hidden="true"></div>
 
   <nav>
     <a class="nav-brand" href="/">DANIEL NWAZUE</a>
@@ -33,7 +34,7 @@
 
       
       <div class="project-cover-wrap">
-        <img src="/images/cane-stabilizer/hero.jpg" alt="Cane Stabilizer" class="project-cover-img"/>
+        <img src="/images/cane-stabilizer/hero.png" alt="Cane Stabilizer" class="project-cover-img"/>
       </div>
       
 
@@ -61,59 +62,104 @@
     </div>
 
     <div class="project-body">
-      <p class="project-body">This project was part of MIT's Assistive Technology (AT) design program, where student teams are paired with a real co-designer to build something that addresses a specific need in their life. Our co-designer was <strong>Susan Bibbins</strong>, a retired children's psychologist living with fibromyalgia and hemiparesis — conditions that leave her with one reliably functional hand. Susan uses a cane daily, and the problem she brought to us was simple but frustrating: <strong>when she sets her cane down, it falls over.</strong></p>
-<h2 class="project-body-heading">The Problem</h2>
-<p class="project-body">A cane that falls means Susan has to bend down to retrieve it — difficult and sometimes unsafe with her condition. Existing solutions like wall hooks or cane holders require two hands or a fixed surface. What Susan needed was something <em>on the cane itself</em> that would keep it upright automatically, work with one hand, and not get in her way while she's walking.</p>
-<p class="project-body">Our design requirements, derived directly from working with Susan:</p>
+      <h2 class="project-body-heading">Introduction</h2>
+<p class="project-body">This project was part of MIT's Assistive Technology (AT) design program, where student teams are paired with a real co-designer to build something that addresses a specific need in their life. Our co-designer was <strong>Susan Bibbins</strong>, a retired children's psychologist living with fibromyalgia and hemiparesis, which leave her with one reliably functional hand. Susan uses a cane daily.</p>
+<p class="project-body"><strong>Problem statement:</strong> Current cane stabilizers are too bulky, heavy, and obstructive. We set out to create an external attachment to keep Susan's cane upright when not in use.</p>
+<p class="project-body"><strong>Design requirements:</strong></p>
 <ul class="project-body-list">
-  <li>Operable with one functional hand</li>
-  <li>Does not impede normal cane use while walking</li>
+  <li>Doesn't impede the cane's functionality</li>
+  <li>Accessible for someone with one functional hand</li>
   <li>Lightweight and self-stabilizing when deployed</li>
-  <li>Not a trip hazard — legs must retract fully</li>
-  <li>Weatherproof enough for outdoor use</li>
+  <li>Does not interfere with footing (not a trip hazard)</li>
+  <li>Able to withstand different weather conditions</li>
+  <li>Externally motorized</li>
 </ul>
+<div class="img-grid cols-1">
+  <div class="img-block">
+    <img src="/images/cane-stabilizer/susan.png" alt="Our co-designer Susan" class="project-cover-img"/>
+    <p class="img-caption">Our co-designer, Susan Bibbins</p>
+  </div>
+</div>
 <h2 class="project-body-heading">Concept Selection</h2>
-<p class="project-body">We evaluated leg actuation concepts across two axes: how the legs deploy, and how the mechanism is triggered. Options ranged from motor-driven lever legs to pre-bent legs constrained in tubes, to a tripod system on a translating ring. For actuation we considered a hand-brake, a motor-powered string spool, and a hand pump. We landed on a <strong>spring-loaded leg linkage system</strong> actuated by a motor and string — the legs are held retracted by string tension, and releasing the motor lets the springs push them out into a tripod stance.</p>
-<h2 class="project-body-heading">Leg & Linkage Design</h2>
-<p class="project-body">My focus on the team was the leg and linkage geometry. The key constraint was making sure each leg, as it swings out, makes <strong>flush contact with the ground</strong> — not just a point or edge contact that would make the stabilizer rock. This required careful attention to the arc the leg tip traces as the linkage rotates.</p>
-<p class="project-body">The linkage pivot point needed to sit <em>above</em> the leg's centerpoint so that the geometry naturally sweeps the foot flat to the ground at full extension. Getting this wrong by even a few millimeters meant the cane would sit on a corner of the leg rather than a flat face — unstable and hard on the material over time.</p>
-<div class="img-grid cols-2">
+<p class="project-body">Early work explored internal cane modifications, but there was no space to do anything inside the cane, so we moved to external designs. We evaluated concepts along two axes:</p>
+<div class="img-grid cols-1">
   <div class="img-block">
-    <img src="/images/cane-stabilizer/leg-linkage-cad.jpg" alt="Leg linkage CAD" class="project-cover-img"/>
-    <p class="img-caption">Leg linkage CAD — pivot positioned above leg centerpoint</p>
+    <img src="/images/cane-stabilizer/concepts.svg" alt="Concept Selection" class="project-cover-img"/>
   </div>
+<p class="project-body">We landed on a spring-loaded leg linkage system actuated by a motor and string.</p>
+<h2 class="project-body-heading">Current Design</h2>
+<p class="project-body">The full system breaks down into six subsystems:</p>
+<div class="img-grid cols-1">
   <div class="img-block">
-    <img src="/images/cane-stabilizer/ligature-connection.jpg" alt="Ligature connection and spring holder" class="project-cover-img"/>
-    <p class="img-caption">Ligature connection with spring holder and leg attachment feature</p>
-  </div>
-</div>
-<h2 class="project-body-heading">Material Testing: PLA vs TPU</h2>
-<p class="project-body">I also led testing to compare <strong>PLA and TPU</strong> for the leg components. The tradeoffs were real: PLA is stiffer and easier to print accurately, but brittle under repeated impact. TPU is flexible and absorbs shock well, but its compliance makes the leg geometry less predictable — a leg that flexes slightly changes the contact angle at the foot.</p>
-<p class="project-body">We ran FEA on the leg geometry, incrementally increasing axial, vertical, and horizontal loads until reaching yield, to understand where each material would fail first. The analysis also fed into sizing — optimizing leg length, width, and thickness to stay within the weight budget set by the existing cane tip (max 0.32 kg).</p>
-<div class="img-grid cols-2">
-  <div class="img-block">
-    <img src="/images/cane-stabilizer/fea-analysis.jpg" alt="FEA stress analysis on leg geometry" class="project-cover-img"/>
-    <p class="img-caption">FEA stress analysis — loading to yield in three axes</p>
-  </div>
-  <div class="img-block">
-    <img src="/images/cane-stabilizer/pla-tpu-samples.jpg" alt="PLA and TPU printed leg samples" class="project-cover-img"/>
-    <p class="img-caption">PLA vs TPU printed leg samples for comparison testing</p>
+    <img src="/images/cane-stabilizer/design.svg" alt="Full cane stabilizer assembly with numbered subsystems" class="project-cover-img"/>
   </div>
 </div>
-<h2 class="project-body-heading">The Full System</h2>
-<p class="project-body">The complete mechanism consists of a motor and spool mounted low on the cane shaft, braided UHMWPE cord running down to a translating ring, three spring-loaded legs deploying from that ring, and an Arduino Nano controller with buttons for deploy and retract. We prototyped and demoed a working version — nicknamed <strong>"Candy Cane"</strong> — at the design review.</p>
-<div class="img-grid cols-2">
+<h3 class="project-body-heading">Motor Housing and Spool</h3>
+<p class="project-body">The motor housing keeps the motor low-profile and firmly affixed to the cane. The motor and battery housings attach to the upper section of the cane with a ligature. The housings compress around the motor, battery, and switch so nothing moves. All enclosures are waterproofed so the cane can be used in any conditions.</p>
+<p class="project-body">The spool is the interface between motor and string. The motor spins the spool, which wraps and unwraps the string around it.</p>
+<div class="img-grid cols-1">
   <div class="img-block">
-    <img src="/images/cane-stabilizer/full-assembly.jpg" alt="Full cane stabilizer assembly" class="project-cover-img"/>
-    <p class="img-caption">Full assembly CAD with all six numbered components</p>
-  </div>
-  <div class="img-block">
-    <img src="/images/cane-stabilizer/prototype-demo.jpg" alt="Working prototype demo" class="project-cover-img"/>
-    <p class="img-caption">Working prototype at the design review demo</p>
+    <img src="/images/cane-stabilizer/motor.svg" alt="Motor housing and Spool CAD" class="project-cover-img"/>
   </div>
 </div>
-<h2 class="project-body-heading">Reflection</h2>
-<p class="project-body">Designing for a specific person changes how you think about every decision. The leg contact geometry problem, for example, wasn't just a mechanical puzzle — a stabilizer that rocks is one Susan can't trust, which means she wouldn't use it. That raised the stakes on getting the arc right. Working directly with Susan throughout the semester kept that kind of detail from being an afterthought.</p>
+<h3 class="project-body-heading">Ligature Connections & Leg Linkage Design</h3>
+<p class="project-body">The ligature serves as a spring holder with a feature to connect the legs. The tightening mechanism was inspired by a clarinet reed ligature.</p>
+<p class="project-body">My focus on the team was the leg and linkage geometry. The legs are connected by two rings: one non-translating (with a manual tightening mechanism) and one translating (which converts vertical motion into leg extension). Hooks on both rings connect springs that drive the legs outward. Material was added to the bottom of each leg for grip.</p>
+<p class="project-body">The key constraint was making sure each leg makes <strong>flush contact with the ground</strong>, not just a point or edge that would rock. The linkage pivot point sits <em>above</em> the leg's centerpoint so that the geometry sweeps the foot flat at full extension. Getting this wrong by even a few millimeters meant the cane would sit on a corner of the leg rather than a flat face, making it unstable and wearing down the material.</p>
+<div class="img-grid cols-1">
+  <div class="img-block">
+    <img src="/images/cane-stabilizer/leg.svg" alt="Leg linkage & Ligature" class="project-cover-img"/>
+  </div>
+</div>
+<h3 class="project-body-heading">String Mechanism and Motor Controller</h3>
+<p class="project-body">A braided UHMWPE string runs along the cane using custom 3D-printed attachment points. One end fastens to the translating ring; the other anchors to the spool on the motor shaft. When the motor rotates in one direction, the spool winds the string, lifting the translating ring and retracting the legs. Rotating the opposite direction unwinds the string, allowing 3x38mm tension springs to extend the legs downward.</p>
+<p class="project-body">The initial prototype used an Arduino Nano to control a servo. The final design uses a motor, SPDT rocker switch, and 9V battery.</p>
+<div class="img-grid cols-1">
+  <div class="img-block">
+    <img src="/images/cane-stabilizer/string.svg" alt="String Mechanism and Controller" class="project-cover-img"/>
+  </div>
+</div>
+<h2 class="project-body-heading">FEA Analysis for Material Choice</h2>
+<p class="project-body"><strong>Materials considered</strong> (based on availability and feasibility):</p>
+<ul class="project-body-list">
+  <li>3D-printed: PLA, TPU</li>
+  <li>Plastics: Delrin, PVC</li>
+  <li>Non-plastics: Aluminum, Wood</li>
+</ul>
+<p class="project-body"><strong>FEA setup:</strong> Optimizing leg length, width, and thickness. Incrementally increasing axial, vertical, and horizontal loads until the leg reached yield strength.</p>
+<p class="project-body"><strong>Additional analysis:</strong></p>
+<ul class="project-body-list">
+  <li>Max weight: 0.32 kg (0.705 lbs) based on existing cane tip</li>
+  <li>Max force for motor: 18 N (max weight of stopper × 3 spring force)</li>
+  <li>Center of mass calculation to ensure stability</li>
+</ul>
+<div class="img-grid cols-1">
+  <div class="img-block">
+    <img src="/images/cane-stabilizer/fea.svg" alt="FEA stress analysis" class="project-cover-img"/>
+  </div>
+</div>
+<h2 class="project-body-heading">Demo: Candy Cane</h2>
+<p class="project-body">We prototyped and demoed a working version, nicknamed <strong>"Candy Cane"</strong>, at the final showcase.</p>
+<div class="img-grid cols-1">
+  <div class="img-block">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius);">
+      <iframe
+        src="https://www.youtube.com/embed/mDfBE3YWils"
+        title="Cane stabilizer prototype demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      </iframe>
+    </div>
+    <p class="img-caption">Working prototype at the final showcase</p>
+  </div>
+</div>
+<h2 class="project-body-heading">Further Work</h2>
+<p class="project-body"><strong>Durability:</strong> Analyze the stabilizer's lifespan to determine how frequently parts need replacement. Parts should be easily replaceable.</p>
+<p class="project-body"><strong>Terrain adaptability:</strong> Improve the stabilizer to function reliably on unpaved, uneven, and slippery surfaces.</p>
+<p class="project-body"><strong>Open sourcing:</strong> Make documentation publicly available for anyone to build their own stabilizer using affordable, readily accessible materials and tools.</p>
+
     </div>
 
     <div class="project-nav">
@@ -134,6 +180,15 @@
   </footer>
 
   <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var loadBar = document.querySelector('.page-load-bar');
+      if (!loadBar) return;
+
+      loadBar.addEventListener('animationend', function() {
+        loadBar.classList.add('is-complete');
+      }, { once: true });
+    });
+
     
     window.addEventListener('scroll', function() {
       document.querySelector('nav').classList.toggle('nav-scrolled', window.scrollY > 0);

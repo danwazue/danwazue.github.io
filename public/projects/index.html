@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/main.css"/>
 </head>
 <body>
+  <div class="page-load-bar" aria-hidden="true"></div>
 
   <nav>
     <a class="nav-brand" href="/">DANIEL NWAZUE</a>
@@ -23,15 +24,26 @@
 <div class="container">
 
   <section class="section">
-    <h1 class="projects-title">Projects</h1>
-    <p class="gallery-subtitle">All projects and work.</p>
-
+    <h1 class="projects-title">All Projects and Work</h1>
+    
     <div class="project-grid">
+      
+      <a href="/projects/2008-yoyo/" class="card">
+        <div class="card-image-wrapper">
+          
+            <img src="/images/2008-yoyo/hero.png" alt="Projects" loading="lazy"/>
+          
+        </div>
+        <div class="card-body">
+          <p class="card-title"><strong>2.008 Yo-Yo</strong></p>
+          <p class="card-subtitle">Manufacturing · 2026</p>
+        </div>
+      </a>
       
       <a href="/projects/cane-stabilizer/" class="card">
         <div class="card-image-wrapper">
           
-            <img src="/images/cane-stabilizer/hero.jpg" alt="Projects" loading="lazy"/>
+            <img src="/images/cane-stabilizer/hero.png" alt="Projects" loading="lazy"/>
           
         </div>
         <div class="card-body">
@@ -43,7 +55,7 @@
       <a href="/projects/vibration-analysis/" class="card">
         <div class="card-image-wrapper">
           
-            <img src="/images/ox-vibration/hero.jpg" alt="Projects" loading="lazy"/>
+            <img src="/images/vibration-analysis/hero.jpg" alt="Projects" loading="lazy"/>
           
         </div>
         <div class="card-body">
@@ -55,7 +67,7 @@
       <a href="/projects/2007-robot/" class="card">
         <div class="card-image-wrapper">
           
-            <img src="/images/2007/robot-hero.jpg" alt="Projects" loading="lazy"/>
+            <img src="/images/2007-robot/hero.jpeg" alt="Projects" loading="lazy"/>
           
         </div>
         <div class="card-body">
@@ -67,24 +79,12 @@
       <a href="/projects/desktop-mill/" class="card">
         <div class="card-image-wrapper">
           
-            <img src="/images/smart-mill/hero.jpg" alt="Projects" loading="lazy"/>
+            <img src="/images/desktop-mill/hero.png" alt="Projects" loading="lazy"/>
           
         </div>
         <div class="card-body">
-          <p class="card-title"><strong>Smart Mill UROP</strong></p>
+          <p class="card-title"><strong>Desktop Mill UROP</strong></p>
           <p class="card-subtitle">Research · 2025</p>
-        </div>
-      </a>
-      
-      <a href="/projects/2008-yoyo/" class="card">
-        <div class="card-image-wrapper">
-          
-            <img src="/images/2008/yoyo-hero.jpg" alt="Projects" loading="lazy"/>
-          
-        </div>
-        <div class="card-body">
-          <p class="card-title"><strong>2.008 Yo-Yo</strong></p>
-          <p class="card-subtitle">Manufacturing · 2025</p>
         </div>
       </a>
       
@@ -103,7 +103,7 @@
       <a href="/projects/refrigerated-seed-dispenser/" class="card">
         <div class="card-image-wrapper">
           
-            <img src="/images/seed-dispenser/hero.jpg" alt="Projects" loading="lazy"/>
+            <img src="/images/refrigerated-seed-dispenser/hero.png" alt="Projects" loading="lazy"/>
           
         </div>
         <div class="card-body">
@@ -115,7 +115,7 @@
       <a href="/projects/thruster-shield/" class="card">
         <div class="card-image-wrapper">
           
-            <img src="/images/thruster-shield/hero.jpg" alt="Projects" loading="lazy"/>
+            <img src="/images/thruster-shield/hero.png" alt="Projects" loading="lazy"/>
           
         </div>
         <div class="card-body">
@@ -140,6 +140,15 @@
   </footer>
 
   <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var loadBar = document.querySelector('.page-load-bar');
+      if (!loadBar) return;
+
+      loadBar.addEventListener('animationend', function() {
+        loadBar.classList.add('is-complete');
+      }, { once: true });
+    });
+
     
     window.addEventListener('scroll', function() {
       document.querySelector('nav').classList.toggle('nav-scrolled', window.scrollY > 0);

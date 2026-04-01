@@ -15,4 +15,4 @@ photo = "/images/headshot.jpg"
 
 <p class="mg-top-and-bottom-24px text-300">Outside of engineering, I enjoy building community on campus. I lead an <span class="highlight">African/Afro-Caribbean Bible study</span> and am also a member of the <span class="highlight">Gordon Engineering Leadership (GEL) program</span> at MIT.</p>
 
-<p class="mg-top-and-bottom-24px text-300">Feel free to check out my <a href="https://drive.google.com/file/d/1CheAgo4D7geyosUdHsplp-6e2gCqAN6w/view?usp=sharing" target="_blank" class="text-span lighter">resume</a> or <a href="mailto:danwazue@mit.edu" class="text-span lighter">email me</a> if you'd like to connect!</p>
+<p class="mg-top-and-bottom-24px text-300">Feel free to check out my <a href="https://drive.google.com/file/d/1beXQ0Ig5ZHk6MtgJaQfsIfKN72jOH8o9/view?usp=sharing" target="_blank" class="text-span lighter">resume</a> or <a href="mailto:danwazue@mit.edu" class="text-span lighter">email me</a> if you'd like to connect!</p>

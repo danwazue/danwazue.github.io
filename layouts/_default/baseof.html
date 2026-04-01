@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/main.css"/>
 </head>
 <body>
+  <div class="page-load-bar" aria-hidden="true"></div>
 
   <nav>
     <a class="nav-brand" href="/">{{ .Site.Title | upper }}</a>
@@ -31,6 +32,15 @@
   </footer>
 
   <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var loadBar = document.querySelector('.page-load-bar');
+      if (!loadBar) return;
+
+      loadBar.addEventListener('animationend', function() {
+        loadBar.classList.add('is-complete');
+      }, { once: true });
+    });
+
     // add shadow to navbar when page is scrolled
     window.addEventListener('scroll', function() {
       document.querySelector('nav').classList.toggle('nav-scrolled', window.scrollY > 0);

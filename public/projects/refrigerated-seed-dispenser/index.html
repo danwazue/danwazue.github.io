@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/main.css"/>
 </head>
 <body>
+  <div class="page-load-bar" aria-hidden="true"></div>
 
   <nav>
     <a class="nav-brand" href="/">DANIEL NWAZUE</a>
@@ -33,7 +34,7 @@
 
       
       <div class="project-cover-wrap">
-        <img src="/images/seed-dispenser/hero.jpg" alt="Refrigerated Seed Dispenser" class="project-cover-img"/>
+        <img src="/images/refrigerated-seed-dispenser/hero.png" alt="Refrigerated Seed Dispenser" class="project-cover-img"/>
       </div>
       
 
@@ -61,54 +62,57 @@
     </div>
 
     <div class="project-body">
-      <p class="project-body">In MIT's 2.00 Introductory Product Design course, our team was assigned the theme of <strong>"Gathering"</strong> and matched with volunteers from the <strong>Somerville Gardening Club</strong> and <strong>Somerville Growing Center</strong> — two organizations working to get more people to plant native, pollinator-friendly species instead of the decorative but ecologically barren plants typically sold at garden centers.</p>
+      <p class="project-body">In MIT's <strong>2.00</strong> Introductory Product Design course, our team was assigned the theme of <strong>"Gathering"</strong> and matched with volunteers from the <strong>Somerville Gardening Club</strong> and <strong>Somerville Growing Center</strong>, two organizations focused on promoting native plant cultivation in the community.</p>
 <h2 class="project-body-heading">The Problem</h2>
-<p class="project-body">The volunteers were already running community events and handing out seed packets, but they kept running into the same wall: many native Boston seeds require <strong>cold stratification</strong> before they'll germinate. These seeds naturally experience a cold winter period in the ground — without mimicking that process artificially, they simply won't sprout when planted in spring.</p>
+<p class="project-body">The volunteers were already running community events and handing out seed packets, but they repeatedly encountered the same issue: many native Boston seeds require <strong>cold stratification</strong> before germination can occur. These seeds naturally experience a cold winter period in the ground, but without mimicking that process artificially, they simply won't sprout when planted in spring.</p>
 <p class="project-body">Most gardeners don't know this, and there was no easy way for the volunteers to both store seeds at the right temperature <em>and</em> explain the process to someone picking up a packet at a community event. Education and storage were two separate problems with no unified solution.</p>
 <div class="img-grid cols-2">
   <div class="img-block">
-    <img src="/images/seed-dispenser/user-site-visit.jpg" alt="Visit to Somerville Growing Center" class="project-cover-img"/>
+    <img src="/images/refrigerated-seed-dispenser/site_visit.jpg" alt="Visit to Somerville Growing Center" class="project-cover-img"/>
     <p class="img-caption">Site visit to the Somerville Growing Center</p>
   </div>
   <div class="img-block">
-    <img src="/images/seed-dispenser/seed-shed.jpg" alt="Existing seed storage shed" class="project-cover-img"/>
+    <img src="/images/refrigerated-seed-dispenser/storage_shed.jpg" alt="Existing seed storage shed" class="project-cover-img"/>
     <p class="img-caption">Existing seed storage — no temperature control</p>
   </div>
 </div>
 <h2 class="project-body-heading">Design Process</h2>
-<p class="project-body">We explored several concepts before converging on a <strong>refrigerated seed library</strong> — a dispenser that could live in a library, school, or community center, keep seeds cold for stratification, and surface educational content right at the point of pickup. After an initial round of user feedback, we settled on a <strong>hexagonal form</strong> with three small drawers on each of the six sides, giving us 18 compartments for different seed varieties.</p>
+<p class="project-body">We explored several concepts before converging on a <strong>refrigerated seed library:</strong> a dispenser that could live in a library, school, or community center, keep seeds cold for stratification, and surface educational content right at the point of pickup. After an initial round of user feedback, we settled on a <strong>hexagonal form</strong> with three small drawers on each of the six sides, giving us 18 compartments for different seed varieties.</p>
 <p class="project-body">Key design decisions:</p>
 <ul class="project-body-list">
-  <li><strong>Thermoelectric cooling with Peltier plates</strong> and aluminum tubing — simple, reliable, no compressor required</li>
+  <li><strong>Thermoelectric cooling with Peltier plates</strong> and aluminum tubing: simple, reliable, no compressor required</li>
   <li><strong>Polyurethane foam walls</strong> for insulation and structural rigidity, easy to machine for rapid prototyping</li>
   <li><strong>Lazy Susan rotating base</strong> so users can spin the dispenser to reach any drawer without moving around it</li>
   <li><strong>QR codes on seed packets</strong> linking to growing instructions, so education travels with the seed</li>
-  <li>Plant photos on drawer faces so users know what they're getting before they pick it up</li>
+  <li><strong>Plant photos on drawer faces</strong> so users know what they're getting before they pick it up</li>
 </ul>
 <div class="img-grid cols-2">
   <div class="img-block">
-    <img src="/images/seed-dispenser/early-sketches.jpg" alt="Early concept sketches" class="project-cover-img"/>
-    <p class="img-caption">Early concept sketches exploring form and storage configurations</p>
+    <img src="/images/refrigerated-seed-dispenser/seed_label.jpg" alt="Seed label design" class="project-cover-img"/>
+    <p class="img-caption">Seed label used to explain planting and cold stratification</p>
   </div>
   <div class="img-block">
-    <img src="/images/seed-dispenser/hex-cad.jpg" alt="Hexagonal dispenser CAD" class="project-cover-img"/>
-    <p class="img-caption">Hexagonal form with 18-drawer layout</p>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius);">
+      <iframe
+        src="https://www.youtube.com/embed/Z1ifpWzYixE"
+        title="Refrigerated Seed Dispenser video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      </iframe>
+    </div>
+    <p class="img-caption">Demo of the refrigerated seed dispenser</p>
   </div>
 </div>
 <h2 class="project-body-heading">Fabrication</h2>
-<p class="project-body">The team split fabrication responsibilities — I assembled the base, laser cut the exhaust panels for the cooling system, and spray painted the body for a clean finish. The full build was a compressed, collaborative push over the final weeks of the semester.</p>
-<div class="img-grid cols-2">
-  <div class="img-block">
-    <img src="/images/seed-dispenser/fabrication.jpg" alt="Fabrication in progress" class="project-cover-img"/>
-    <p class="img-caption">Assembly in progress</p>
-  </div>
-  <div class="img-block">
-    <img src="/images/seed-dispenser/final-product.jpg" alt="Finished seed dispenser at showcase" class="project-cover-img"/>
-    <p class="img-caption">Final prototype at the product showcase</p>
-  </div>
+<p class="project-body">The team split fabrication responsibilities: I assembled the base, laser cut the exhaust panels for the cooling system, and spray painted the body for a clean finish. The full build was a compressed, collaborative push over the final weeks of the semester.</p>
+<div class="img-block">
+  <img src="/images/refrigerated-seed-dispenser/seed_showcase.jpg" alt="Finished seed dispenser at showcase" class="project-cover-img"/>
+  <p class="img-caption">Final prototype at the product showcase</p>
 </div>
 <h2 class="project-body-heading">Reflection</h2>
-<p class="project-body">The most valuable part of this project was how early and often we talked to our users. The hexagonal shape, the Lazy Susan, the QR codes — none of those came from the initial brief. They all came from going back to the Somerville gardeners after our first concept and asking what would actually make this useful at a community event. The design got sharper every time we did that.</p>
+<p class="project-body">The most valuable part of this project was how early and often we talked to our users. The hexagonal shape, the Lazy Susan, the QR codes, none of those came from the initial brief. They all came from going back to the Somerville gardeners after our first concept and asking what would actually make this useful at a community event. The design improved every time we did that.</p>
     </div>
 
     <div class="project-nav">
@@ -129,6 +133,15 @@
   </footer>
 
   <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var loadBar = document.querySelector('.page-load-bar');
+      if (!loadBar) return;
+
+      loadBar.addEventListener('animationend', function() {
+        loadBar.classList.add('is-complete');
+      }, { once: true });
+    });
+
     
     window.addEventListener('scroll', function() {
       document.querySelector('nav').classList.toggle('nav-scrolled', window.scrollY > 0);

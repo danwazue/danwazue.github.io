@@ -11,3 +11,7 @@ title = 'Daniel Nwazue'
   headshot  = '/images/headshot.jpg'
   email     = 'danwazue@mit.edu'
   resumeURL = '/resume.pdf'
+
+[caches]
+[caches.images]
+  dir = ':cacheDir/images'

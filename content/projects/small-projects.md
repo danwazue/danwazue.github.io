@@ -17,12 +17,12 @@ timeline     = '2024-2025'
 
 <p class="project-body">The system uses <strong>ultrasonic sensors (HC-SR04)</strong> mounted to a backpack, controlled by an <strong>Arduino Nano</strong>. I chose ultrasonic over infrared or LiDAR for the cost and reliability in noisy environments. It triggers two alert levels: a medium alarm when something comes within 10 feet, and a high-pitched alarm plus haptic vibration (via a Wii controller motor) when within 5 feet. I chose to mount the sensors to the rider instead of the scooter, to allow it to work across different vehicles.</p>
 
-<div class="img-grid cols-2">
-  <div class="img-block">
-    <img src="/images/small-projects/prototype.png" alt="Breadboard Prototype" class="project-cover-img"/>
-    <p class="img-caption">Breadboard prototype with Arudino, sensors, speaker, and motor.</p>
-  </div>
+
+<div class="img-block">
+  <img src="/images/small-projects/prototype.png" alt="Breadboard Prototype" class="project-cover-img"/>
+  <p class="img-caption">Breadboard prototype with Arudino, sensors, speaker, and motor.</p>
 </div>
+
 
 <p class="project-body">Road testing exposed the system's main weakness: in a busy environment, everything triggers an alert. The constant alarms made it impossible to distinguish a real threat from background noise. The alert logic needed a lot more refinement to be actually useful.</p>
 
